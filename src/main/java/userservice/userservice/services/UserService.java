@@ -16,4 +16,8 @@ public class UserService {
       USER_BASE.put(user.getUserName(), user);
    }
 
+   public User getUser(String userName) {
+      return USER_BASE.get(userName);
+   }
+
 }
