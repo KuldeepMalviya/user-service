@@ -14,6 +14,8 @@ import userservice.userservice.dtos.Event;
 import userservice.userservice.dtos.EventData;
 import userservice.userservice.services.EventService;
 
+import java.util.List;
+
 
 @Slf4j
 @RestController
@@ -23,6 +25,12 @@ public class EventController {
 
    private final EventService eventService;
 
+
+   @GetMapping("/events")
+   public List<String> getAllEvents() {
+      log.info("Returning all event names");
+      return eventService.getAllEventNames();
+   }
 
    @PostMapping("/event")
    public void addEvent(@RequestBody Event event) {

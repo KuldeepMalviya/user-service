@@ -6,6 +6,8 @@ import userservice.userservice.dtos.Event;
 import userservice.userservice.dtos.EventData;
 
 import java.util.HashMap;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -32,4 +34,7 @@ public class EventService {
       EVENT_DATA.put(event.getEventName(), event);
    }
 
+   public List<String> getAllEventNames() {
+      return EVENT_DATA.values().stream().map(Event::getEventName).collect(Collectors.toList());
+   }
 }
