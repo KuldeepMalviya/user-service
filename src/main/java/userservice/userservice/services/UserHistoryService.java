@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class UserHistoryService {
 
-   private static HashMap<String, List<UseAction>> USER_HISTORY_BASE = new HashMap<>();
+   static HashMap<String, List<UseAction>> USER_HISTORY_BASE = new HashMap<>();
 
    public void addUserAction(UseAction action) {
       if (USER_HISTORY_BASE.containsKey(action.getUserName())) {
