@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 @Service
 public class EventService {
 
-   private static HashMap<String, Event> EVENT_DATA = new HashMap<>();
+   public static HashMap<String, Event> EVENT_DATA = new HashMap<>();
 
    public void updateEvent(EventData eventData) {
       String eventName = eventData.getEventName();
